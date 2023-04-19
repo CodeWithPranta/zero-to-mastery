@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS Course</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <p>
+            {{ fullName() }}
+        </p>
+        <a v-bind:href="url" target="_blank">Bing</a>
+
+        <p v-html="raw_url"></p>
+        <p>{{ age }}</p>
+        <hr/>
+
+        <label for="fistName">First Name</label>
+        <input type="text" v-model="firstName" />
+        <label for="lastName">Last Name</label>
+        <!-- <input type="text" v-model="lastName" /> -->
+        <!-- Without v-model we can use v-bind -->
+        <input type="text" :value="lastName" @input="updateLastName" />
+
+        <button type="button" v-on:click="increment">Increment</button>
+        <button type="button" @click="age--">Decrement</button>
+    </div>
+
+    <!-- <div id="app2">
+        <p>{{firstName}}
+            {{lastName}}
+        </p>
+    </div> -->
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

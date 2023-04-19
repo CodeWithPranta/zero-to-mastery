@@ -1,0 +1,12 @@
+body {
+    font-size: 22px;
+}
+
+label, input[type="text"] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+[v-cloak] {
+    display: none;
+}
